@@ -1,4 +1,8 @@
-dynosrc-website
+Website for DynoSRC
 ===============
 
-dynosrc-website
+
+To install
+    npm install
+    grunt
+    npm start 
