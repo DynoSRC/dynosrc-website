@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<title>Dogs</title>
+<style>
+.pet,
+.leash,
+.water {
+  position: relative;
+  width: 130px;
+  height: 80px;
+  margin: 50px auto;
+  background: url(http://i.imgur.com/JK7uPFM.png);
+}
+
+.water,
+.leash {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+}
+
+.water {
+  background: url(http://i.imgur.com/COCbO4Q.png);
+}
+
+.leash {
+  background: url(http://i.imgur.com/ia91V5J.png);
+}
+</style>
+<script src="http://waving.2013.nodeknockout.com/dynoSrc/dynoProxy.io.js"></script>
+<!--script src="http://localhost:8000/dynoSrc/dynoProxy.io.js"></script-->
+</head>
+
+<body>
+<h1>Virtual Dog</h1>
+<div class="pet"></div>
+<button class="load-water">Load water.js</button>
+<button class="load-leash">Load leash.js</button>
+<h3>Log</h3>
+<ul class="log"></ul>
+
+<script>
+function log (msg) {
+  document.querySelector('.log').innerHTML += '<li>' + msg + '</li>';
+}
+
+dynoProxy.init({
+  origin: 'http://waving.2013.nodeknockout.com',
+  //origin: 'http://localhost:8000',
+  onStart: function() {
+    log('Established connection to dynoProxy.');
+  }
+});
+
+document.querySelector('.load-water').addEventListener('click', function () {
+  dynoProxy.apply('water', '0.0.1', function() {
+    log('water.js loaded and saved to localStorage!');
+  });
+}, false);
+
+document.querySelector('.load-leash').addEventListener('click', function () {
+  dynoProxy.apply('leash', '0.0.1', function() {
+    log('leash.js loaded and saved to localStorage!');
+  });
+}, false);
+</script>
+</body>
+
+</html>

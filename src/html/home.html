@@ -1,0 +1,293 @@
+{% extends '/base.html' %}
+
+{% block css %}
+  {% parent %}
+  <link rel="stylesheet" href="/css/home.css">
+{% endblock %}
+
+{% block js_head %}
+<script src="/dynoSrc/dynoSrc.io.js"></script>
+
+{% for patch in patches %}
+  {{ patch | safe }}
+{% endfor %}
+{% endblock %}
+
+{% block body %}
+  <a href="https://github.com/diurnalist/dynosrc"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_green_007200.png" alt="Fork me on GitHub"></a>
+
+    <div class="container">
+
+      <div class="masthead">
+      </div>
+      <!-- Jumbotron -->
+      <div class="jumbotron-container">
+        <div class="jumbotron stars overflow-hidden">
+          <div class="row">
+            <div class="col-lg-4">
+              <img class="slideUp" src="/img/dyno.png" alt="">
+            </div>
+            <div class="col-lg-6 col-lg-offset-2">
+              <h1>Dyno<span class="dynogreen">SRC</span></h1>
+              <p class="lead">
+                Eliminate HTTP requests for JavaScript files and serve differential updates to your users on the fly.<br>
+                <b>No, really. Like, seriously.</b></p>
+              <p>
+                <a id="how-it-works-btn" class="btn btn-outline-inverse btn-lg" href="#" role="button">How It Works</a>
+                <a id="benefits-btn" class="btn btn-outline-inverse btn-lg" href="#" role="button">Benefits</a>
+              </p>
+              <p>
+                <a class="btn btn-outline-inverse btn-lg" href="/testdrive" role="button">Test Drive</a>
+                <a class="btn btn-outline-inverse btn-lg" href="/getting-started" role="button">Get Started</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="how-it-works" class="jumbotron-container">
+        <div class="jumbotron stars2">
+        <div class="row">
+          <div class="col-lg-12">
+            <h1 class="text-center">How It Works</h1>
+          </div>
+        </div>
+        <div class="row howto-padding">
+          <div class="col-lg-12">
+            <h1 class="text-center circle no-hover">1</h1>
+              <p class="howto-padding text-center"><strong>Minimize HTTP Requests</strong> - DynoSRC loads JavaScript files inline in your HTML response, then stores them in localStorage. You can even inline the DynoSRC client lib, eliminating all HTTP requests for JavaScript on your site.</p>
+          </div>
+          <div class="row howto-padding">
+            <div class="col-lg-2 col-lg-offset-1 text-center">
+                <i class="fa big how fa-laptop"></i>
+            </div>
+            <div class="col-lg-1 text-center">
+            <i class="fa big arrow fa-arrows-h"></i>
+            </div>
+            <div class="col-lg-4 text-center">
+            <img src="/img/dyno_small.png" alt="">
+            </div>
+            <div class="col-lg-1 text-center">
+              <i class="fa big arrow fa-arrows-h"></i>
+            </div>
+            <div class="col-lg-2 text-center">
+              <i class="fa big how fa-cloud"></i>
+            </div>
+        </div>
+        <div class="row howto-padding">
+          <div class="col-lg-10 col-lg-offset-1">
+            <h1 class="text-center circle no-hover">2</h1>
+              <p class="howto-padding text-center"><strong>Differential Updates</strong> - Now, if a JS asset on your site changes, your users will have to download it again even though just a fraction of it changed. DynoSRC sends down differentials updates, so changes to large files don't require full downloads.</p>
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 vertical-offset">
+              <div class="changed-arrow-1">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                    <polygon points="0,120 0,100 35,10 35,270"
+                      style="fill:#d6e1d7; fill-opacity:0.8"/>
+                </svg>
+              </div>
+              <div class="changed-arrow-2">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                  <polygon points="0,65 0,45 35,195 35,300"
+                    style="fill:#d6e1d7; fill-opacity:0.8"/>
+                </svg>
+              </div>
+              <h3 class="uppercase text-center">dynoSRC.v1.js</h3>
+              <h5 class="uppercase text-center">550 bytes</h5>
+
+<pre><code data-language="javascript" class="rainbow">
+<span class="keyword">var</span> longestDynosources <span class="keyword operator">=</span> [
+  <span class="string">"Argentinosaurus huinculensis"</span>,
+  <span class="string">"Supersaurus vivianae"</span>,
+  <span class="string">"Diplodocus hallorum"</span>,
+  <span class="string">"Sauroposeidon proteles"</span>,
+  <span class="string">"Futalognkosaurus dukei"</span>,
+  <span class="string">"Antarctosaurus giganteus"</span>,
+  <span class="string">"Paralititan stromeri"</span>,
+  <span class="string">"Turiasaurus riodevensis"</span>,
+  <span class="string">"Puertasaurus reuili"</span>
+];
+<div class="code-changed"> </div>
+<span class="storage function">function</span> <span class="entity name function">isDynoSourceAge</span>(){
+
+  <span class="keyword">var</span> dynosourceAge <span class="keyword operator">=</span> <span class="keyword operator">-</span><span class="constant numeric">60000000</span>,
+      today <span class="keyword operator">=</span> <span class="keyword">new</span> <span class="entity function">Date().getUTCFullYear</span>();
+
+  <span class="keyword">return</span> (today <span class="keyword operator">&lt;</span> dynosourceAge);
+}
+<span class="storage function">function</span> <span class="entity name function">isLongDynoSource</span>(dyno){
+
+  <span class="keyword">return</span> (longestDynosources.<span class="function call">indexOf</span>(dyno) <span class="keyword operator">&gt;</span> <span class="keyword operator">-</span><span class="constant numeric">1</span>)
+
+}
+<div class="code-changed"> </div>
+            </code></pre>
+
+          </div>
+          <div class="col-lg-4">
+            <h3 class="uppercase text-center">dynoSRC.v2.js</h3>
+            <h5 class="uppercase text-center">963 bytes</h5>
+
+            <pre><code data-language="javascript" class="rainbow">
+            <div class="changed-arrow-3">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                  <polygon points="0,342 0,115 35,0 35,195"
+                    style="fill:#d6e1d7; fill-opacity:0.8"/>
+                  </svg>
+              </div>
+              <div class="changed-arrow-4">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                  <polygon points="0,465 0,365 35,0 35,125"
+                    style="fill:#d6e1d7; fill-opacity:0.8"/>
+                  </svg>
+              </div>
+<span class="keyword">var</span> longestDynosources <span class="keyword operator">=</span> [
+  <span class="string">"Argentinosaurus huinculensis"</span>,
+  <span class="string">"Supersaurus vivianae"</span>,
+  <span class="string">"Diplodocus hallorum"</span>,
+  <span class="string">"Sauroposeidon proteles"</span>,
+  <span class="string">"Futalognkosaurus dukei"</span>,
+  <span class="string">"Antarctosaurus giganteus"</span>,
+  <span class="string">"Paralititan stromeri"</span>,
+  <span class="string">"Turiasaurus riodevensis"</span>,
+  <span class="string">"Puertasaurus reuili"</span>
+<div class="code-changed">],
+heaviestDynosources <span class="keyword operator">=</span> [
+  <span class="string">"Amphicoelias fragillimus"</span>,
+  <span class="string">"Argentinosaurus huinculensis"</span>,
+  <span class="string">"Puertasaurus reuili"</span>,
+  <span class="string">"Futalognkosaurus dukei"</span>,
+  <span class="string">"Antarctosaurus giganteus"</span>,
+  <span class="string">"Paralititan stromeri"</span>,
+  <span class="string">"Sauroposeidon proteles"</span>,
+  <span class="string">"Turiasaurus riodevensis"</span>,
+  <span class="string">"Diplodocus hallorum"</span>
+];</div>
+<span class="storage function">function</span> <span class="entity name function">isDynoSourceAge</span>(){
+
+  <span class="keyword">var</span> dynosourceAge <span class="keyword operator">=</span> <span class="keyword operator">-</span><span class="constant numeric">60000000</span>,
+      today <span class="keyword operator">=</span> <span class="keyword">new</span> <span class="entity function">Date().getUTCFullYear</span>();
+
+  <span class="keyword">return</span> (today <span class="keyword operator">&lt;</span> dynosourceAge);
+}
+<span class="storage function">function</span> <span class="entity name function">isLongDynoSource</span>(dyno){
+
+  <span class="keyword">return</span> (longestDynosources.<span class="function call">indexOf</span>(dyno) <span class="keyword operator">&gt;</span> <span class="keyword operator">-</span><span class="constant numeric">1</span>)
+
+}
+<div class="code-changed"><span class="storage function">function</span> <span class="entity name function">isHeavyDynoSource</span>(dyno){
+
+  <span class="keyword">return</span> (heaviestDynosources.<span class="function call">indexOf</span>(dyno) <span class="keyword operator">&gt;</span> <span class="keyword operator">-</span><span class="constant numeric">1</span>)
+
+}</div>
+              </code></pre>
+
+            </div>
+            <div class="col-lg-4 vertical-offset">
+              <h3 class="uppercase text-center">Difference</h3>
+              <h5 class="uppercase text-center">369 bytes</h5>
+
+              <pre><code data-language="javascript" class="rainbow">
+
+<div class="code-changed">],
+heaviestDynosources <span class="keyword operator">=</span> [
+  <span class="string">"Amphicoelias fragillimus"</span>,
+  <span class="string">"Argentinosaurus huinculensis"</span>,
+  <span class="string">"Puertasaurus reuili"</span>,
+  <span class="string">"Futalognkosaurus dukei"</span>,
+  <span class="string">"Antarctosaurus giganteus"</span>,
+  <span class="string">"Paralititan stromeri"</span>,
+  <span class="string">"Sauroposeidon proteles"</span>,
+  <span class="string">"Turiasaurus riodevensis"</span>,
+  <span class="string">"Diplodocus hallorum"</span></div>
+
+<div class="code-changed">
+<span class="storage function">function</span> <span class="entity name function">isHeavyDynoSource</span>(dyno){
+
+
+  <span class="keyword">return</span> (heaviestDynosources.<span class="function call">indexOf</span>(dyno) <span class="keyword operator">&gt;</span> <span class="keyword operator">-</span><span class="constant numeric">1</span>)
+
+}</div>
+
+              </code></pre>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="benefits" class="jumbotron-container">
+        <div class="jumbotron stars3 overflow-hidden">
+          <div class="row">
+            <div class="col-lg-12">
+              <h1 class="text-center">Benefits</h1>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12">
+              <p class="howto-padding bench-desc text-center">
+                Why use DynoSRC?<br>
+                Click on the icons below to find out.
+              </p>
+            </div>
+          </div>
+          <div class="row howto-padding">
+            <div class="text-center col-lg-4">
+              <i bench="req" class="circle fa medium fa-road"></i>
+              <h3>Average JS Requests</h3>
+            </div>
+            <div class="text-center col-lg-4">
+              <i bench="band" class="circle fa medium fa-floppy-o"></i>
+              <h3>Bandwidth</h3>
+           </div>
+            <div class="text-center col-lg-4">
+              <i bench="cache" class="circle fa medium fa-rocket"></i>
+              <h3>Cache Eviction</h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6 text-center">
+              <div class="padding-controller">
+                <h1 class="howto-padding header">DynoSRC</h1>
+                <img class="graph" src="/img/dyno_graph.png" alt="">
+              </div>
+            </div>
+            <div class="col-lg-6 text-center">
+              <div class="padding-controller-base">
+                <h1 class="howto-padding header">Baseline</h1>
+                <img class="graph-base" src="/img/dyno_graph_purple.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="jumbotron-container">
+        <div class="jumbotron stars4 overflow-hidden">
+          <div class="row">
+            <div class="col-lg-12">
+              <h1 class="text-center">Get Started with DynoSRC</h1>
+            </div>
+          </div>
+          <div class="row howto-padding">
+            <div class="text-center col-lg-6">
+              <i class="circle no-hover fa medium fa-truck"></i>
+              <h3>Test Drive</h3>
+              <p>See on-the-fly patching in action.</p>
+              <p><a class="btn btn-outline-inverse btn-lg" href="/testdrive" role="button">Try It</a></p>
+            </div>
+            <div class="text-center col-lg-6">
+              <i class="circle no-hover fa medium fa-book"></i>
+              <h3>README</h3>
+              <p>Learn how to use DynoSRC in your NodeJS project.</p>
+              <p><a class="btn btn-outline-inverse btn-lg" href="/getting-started" role="button">Learn It</a></p>
+           </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+{% endblock %}

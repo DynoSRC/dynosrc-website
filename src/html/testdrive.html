@@ -1,0 +1,98 @@
+{% extends '/base.html' %}
+
+{% block css %}
+  {% parent %}
+  <link rel="stylesheet" href="/css/testdrive.css">
+{% endblock %}
+
+{% block js_head %}
+<script src="/dynoSrc/dynoSrc.io.js"></script>
+{% endblock %}
+
+{% block body %}
+  <div class="container">
+    <h1>Test Drive</h1>
+    <p>A demonstration of on-the-fly differential updates to the JS files used by this page. This page does <b>not</b> utilize the inline patch behavior that eliminates HTTP requests -- instead we use JSONP to fetch diffs from the server.</p>
+    <p><b>Also check out our <a href="/proxy-demo">dynoProxy</a> demo!</b></p>
+    <div class="row">
+      <div class="col-md-8">
+        <h3>The square below will be affected by the "foo" module.</h3>
+        <p><span class="red">Version 0.0.1</span> of this module will turn the square <span class="red">red</span>.</p>
+        <p><span class="orange">Version 0.0.2</span> of this module will turn the square <span class="orange">orange</span>.</p>
+        <p><span class="green">Version 0.0.3</span> of this module will turn the square <span class="green">green</span>.</p>
+        <div id="foo" class="square">FOO</div>
+
+        <h3>The circle below will be affected by the "bar" module.</h3>
+        <p><span class="red">Version 0.0.1</span> of this module will turn the circle <span class="red">red</span>.</p>
+        <p><span class="orange">Version 0.0.2</span> of this module will turn the circle <span class="orange">orange</span>.</p>
+        <p><span class="green">Version 0.0.3</span> of this module will turn the circle <span class="green">green</span>.</p>
+        <div id="bar" class="circle">BAR</div>
+
+        <h3>The text below will be affected by the "derp" module.</h3>
+        <p>Version 0.0.1 of this module will turn DERP into "Coke".</p>
+        <p>Version 0.0.2 of this module will turn DERP into "Pepsi".</p>
+        <p>Version 0.0.3 of this module will turn DERP into "Dr. Pepper".</p>
+        <div id="derp" class="box">My favorite soda is DERP!</div>
+      </div>
+
+      <div class="col-md-4">
+        <h3>Your Modules</h2>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Module</th>
+              <th>Version</th>
+              <th>Change</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="foo">
+              <td>foo</td>
+              <td class="version">(none)</td>
+              <td>
+                <select disabled>
+                  <option value="">Select:</option>
+                  <option value="0.0.1">0.0.1</option>
+                  <option value="0.0.2">0.0.2</option>
+                  <option value="0.0.3">0.0.3</option>
+                </select>
+              </td>
+            </tr>
+            <tr class="bar">
+              <td>bar</td>
+              <td class="version">(none)</td>
+              <td>
+                <select disabled>
+                  <option value="">Select:</option>
+                  <option value="0.0.1">0.0.1</option>
+                  <option value="0.0.2">0.0.2</option>
+                  <option value="0.0.3">0.0.3</option>
+                </select>
+              </td>
+            </tr>
+            <tr class="derp">
+              <td>derp</td>
+              <td class="version">(none)</td>
+              <td>
+                <select disabled>
+                  <option value="">Select:</option>
+                  <option value="0.0.1">0.0.1</option>
+                  <option value="0.0.2">0.0.2</option>
+                  <option value="0.0.3">0.0.3</option>
+                </select>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p>After changing versions, you must reload the page to see changes take effect.</p>
+        <a class="btn btn-default">Reload Page</a>
+        <h4 class="diff-header">Latest Diff Applied</h4>
+        <pre class="diff-body"></pre>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block js_body %}
+  <script src="/js/testdrive.js"></script>
+{% endblock %}

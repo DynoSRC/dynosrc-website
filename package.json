@@ -1,0 +1,47 @@
+{
+  "name": "nko4-waving",
+  "version": "0.0.2",
+  "description": "ヽ( ´¬`)ノ",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node ./node_modules/tap/bin/tap.js --stderr ./test/test.js ./test/dynosource.js --tap"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:nko4/waving.git"
+  },
+  "dependencies": {
+    "consolidate": "0.9.1",
+    "express": "3.4.0",
+    "swig": "1.0.0-rc3",
+    "underscore": "1.5.2",
+    "diff": "~1.0.7",
+    "tap": "0.3.3",
+    "async": "~0.2.9",
+    "cookies": "~0.3.6",
+    "mkdirp": "*",
+    "Deferred": "*",
+    "marked" : "0.2.10",
+    "esformatter": "0.0.11",
+    "request": "2.27.0",
+    "dynosrc" : "0.0.1"
+  },
+  "engines": {
+    "node": "0.10.x"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-less": "~0.7.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-uglify": "~0.2.4",
+    "grunt-contrib-jshint": "~0.6.4",
+    "grunt-replace": "~0.5.1",
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-contrib-qunit": "~0.3.0",
+    "grunt-contrib-connect": "~0.5.0"
+  },
+  "optionalDependencies": {
+    "bower": "~1.2.7"
+  }
+}

@@ -1,0 +1,28 @@
+{% extends '/base.html' %}
+
+{% block css %}
+  {% parent %}
+  <link rel="stylesheet" href="/css/proxy-demo.css">
+{% endblock %}
+
+{% block body %}
+  <div class="container">
+    <h1>dynoProxy Demo</h1>
+    <p>Use DynoSRC as a central server to share modules in localStorage accross different websites!</p>
+    <p>In this demo, we have two different "virtual pet" sites: One for cats, and one for dogs. But cats and dogs need some of the same things right? Use the buttons in the iframes below to see code sharing in action.</p>
+    <p>Check your Network tab to see what is being sent down over the wire.</p>
+
+    <div class="row">
+      <div class="col-md-6">
+        <script>
+          document.write('<iframe src="//' + document.domain + ':8001"></iframe>');
+        </script>
+      </div>
+      <div class="col-md-6">
+        <script>
+          document.write('<iframe src="//' + document.domain + ':8002"></iframe>');
+        </script>
+      </div>
+    </div>
+  </div>
+{% endblock %}
