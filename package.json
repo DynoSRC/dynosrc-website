@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "test": "node ./node_modules/tap/bin/tap.js --stderr ./test/test.js ./test/dynosource.js --tap"
+    "test": "node ./node_modules/tap/bin/tap.js --stderr ./test/*.js --tap"
   },
   "repository": {
     "type": "git",
