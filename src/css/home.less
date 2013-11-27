@@ -28,7 +28,7 @@
 }
 
 .code-changed { 
-  background-color: rgba(88, 140, 91, 0.1);
+  background-color: rgba(88,140,91,0.1);
   width: 320px;
   margin-left: -10px;
 }
@@ -218,4 +218,54 @@ i.medium {
   text-shadow: none;
   background-color: #fff;
   border-color: #fff;
+}
+
+
+/*-----------------------------------------------------------------------------
+-* Dyno graphics
+-*---------------------------------------------------------------------------*/
+.dyno {
+  font-size: 32px;
+  height: 25em;
+  width: 28em;
+}
+.dyno-green:after {
+  color: black;
+  box-shadow: 0 5em,0 6em,0 7em,0 8em,1em 4em,1em 5em,1em 8em,1em 9em,2em 2em,2em 3em,2em 4em,2em 9em,3em 1em,3em 2em,3em 9em,4em 0em,4em 1em,4em 4em,4em 9em,4em 10em,4em 11em,4em 12em,4em 13em,4em 14em,4em 15em,4em 16em,4em 17em,4em 18em,5em 0em,5em 9em,5em 10em 0 #1C501F,5em 11em 0 #1C501F,5em 12em 0 #3A6E3D,5em 13em 0 #3A6E3D,5em 14em 0 #3A6E3D,5em 15em 0 #3A6E3D,5em 16em 0 #3A6E3D,5em 17em 0 #3A6E3D,5em 18em,5em 19em,5em 20em,6em 0em,6em 4em,6em 8em,6em 16em 0 #3A6E3D,6em 17em 0 #003201,6em 18em 0 #1C501F,6em 19em 0 #1C501F,6em 20em,6em 21em,6em 22em,6em 23em,7em 0em,7em 1em,7em 17em 0 #3A6E3D,7em 18em 0 #3A6E3D,7em 19em 0 #003201,7em 20em 0 #1C501F,7em 21em,7em 22em 0 #3A6E3D,7em 23em,8em 1em,8em 2em,8em 9em,8em 10em,8em 11em,8em 12em,8em 13em,8em 19em 0 #3A6E3D,8em 20em 0 #1C501F,8em 21em,8em 22em,8em 23em,9em 2em,9em 3em,9em 4em,9em 5em,9em 6em,9em 7em,9em 8em,9em 9em,9em 13em,9em 14em,9em 20em 0 #3A6E3D,9em 21em 0 #3A6E3D,9em 22em,10em 14em,10em 22em,11em 14em,11em 23em,11em 24em,12em 13em,12em 14em,12em 24em,13em 13em,13em 18em 0 #1C501F,13em 24em,14em 13em,14em 16em 0 #1C501F,14em 21em 0 #3A6E3D,14em 22em 0 #1C501F,14em 23em,14em 24em,15em 13em,15em 18em 0 #1C501F,15em 22em 0 #1C501F,15em 23em,16em 13em,16em 16em 0 #1C501F,16em 22em 0 #1C501F,16em 23em,17em 13em,17em 14em,17em 18em 0 #1C501F,17em 22em 0 #1C501F,17em 23em,17em 24em,18em 14em,18em 24em,19em 14em,19em 24em,20em 14em,20em 15em,20em 21em 0 #1C501F,20em 22em,20em 23em,20em 24em,21em 15em,21em 16em,21em 17em,21em 21em 0 #1C501F,21em 22em,22em 17em,22em 18em,22em 19em,22em 21em 0 #3A6E3D,22em 22em,23em 19em,23em 20em,23em 21em 0 #3A6E3D,23em 22em,24em 20em,24em 21em 0 #3A6E3D,24em 22em,25em 20em,25em 21em,25em 22em,26em 21em,26em 22em,27em 22em,5.5em 3.5em 0 2.5em #588C5B,2.5em 6.5em 0 1.5em #588C5B,6.5em 6.5em 0 1.5em #588C5B,6.5em 10.5em 0 1.5em #588C5B,6.5em 14.5em 0 1.5em #588C5B,12em 18em 0 4em #588C5B,20.5em 18.5em 0 1.5em #588C5B,15.5em 18.5em 0 4.5em #588C5B;
+  content: '';
+  display: block;
+  height: 1em;
+  position: absolute;
+  width: 1em;
+}
+
+
+
+.dyno-glasses {
+  height: 3em;
+  width: 9em;
+}
+.dyno-glasses:after {
+  color: #fff;
+  box-shadow: 1em 0,2em 0,2em 1em,2em 2em,3em 0,3em 1em 0 #59678C,3em 2em,4em 0,4em 1em,4em 2em,5em 0,5em 1em 0 #59678C,5em 2em,6em 0,6em 1em,6em 2em,7em 0,8em 0;
+  content: '';
+  display: block;
+  height: 1em;
+  position: absolute;
+  width: 1em;
+}
+
+
+.dyno-small {
+  font-size: 12px;
+  -webkit-transform: rotateY(180deg);
+     -moz-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.dyno-small .dyno-glasses {
+  position: absolute;
+  left: 1em;
+  top: 3em;
+  z-index: 10;
 }
