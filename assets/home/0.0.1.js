@@ -34,7 +34,7 @@ $(document).ready(function() {
     },
     'cache': {
       'el': "#bench-cache",
-      'text': 'You\'ll never now what state the cache is in and the data that you stored there may have been evicted by the browser to accommodate other data. That wouldn\'t happen with DynoSRC.',
+      'text': 'You\'ll never know what state the cache is in and the data that you stored there may have been evicted by the browser to accommodate other data. That wouldn\'t happen with DynoSRC.',
       'dynoOffset': 1,
       'baseOffset': 12,
       'dynoText': 'I SEE ALL',
