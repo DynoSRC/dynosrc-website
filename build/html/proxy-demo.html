@@ -16,7 +16,7 @@
       <div class="col-md-6">
         <script>
           var domainParts = document.domain.split('.');
-          if (domainParts.length > 3) domainParts.shift();
+          if (domainParts.length === 3) domainParts.shift();
           domainParts.unshift('cats');
           document.write('<iframe src="//' + domainParts.join('.') + '"></iframe>');
         </script>
@@ -24,7 +24,7 @@
       <div class="col-md-6">
         <script>
           var domainParts = document.domain.split('.');
-          if (domainParts.length > 3) domainParts.shift();
+          if (domainParts.length === 3) domainParts.shift();
           domainParts.unshift('dogs');
           document.write('<iframe src="//' + domainParts.join('.') + '"></iframe>');
         </script>
