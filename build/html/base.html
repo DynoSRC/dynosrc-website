@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta name="team" content="ヽ( ´¬`)ノ">
+
+<title>{% block title %}{{ title }} - DynoSRC{% endblock %}</title>
+
+{% block head %}{% endblock %}
+
+{% block css %}
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/third-party/bootstrap/bootstrap.css">
+  <link rel="stylesheet" href="/css/third-party/bootstrap/bootstrap-theme.css">
+{% endblock %}
+
+{% block js_head %}{% endblock %}
+</head>
+
+<body>
+{% block body %}{% endblock %}
+
+{% block js_body %}{% endblock %}
+</body>
+
+</html>

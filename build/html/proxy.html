@@ -1,0 +1,29 @@
+{% extends './build/html./build/html./build/html./build/html./build/html./build/html./build/htmlbuild/html/build/html/Users/ryanstevens/Documents/workspaces/node_modules/dynosrc-website/build/html/Users/ryanstevens/Documents/workspaces/node_modules/dynosrc-website/build/html/Users/ryanstevens/Documents/workspaces/node_modules/dynosrc-website/build/html/Users/ryanstevens/Documents/workspaces/node_modules/dynosrc-website/build/html/Users/ryanstevens/Documents/workspaces/node_modules/dynosrc-website/build/html/Users/ryanstevens/Documents/workspaces/node_modules/dynosrc-website/build/html/Users/ryanstevens/Documents/workspaces/node_modules/dynosrc-website/build/html/Users/ryanstevens/Documents/workspaces/node_modules/dynosrc-website/build/html/Users/ryanstevens/Documents/workspaces/node_modules/dynosrc-website/build/html/Users/ryanstevens/Documents/workspaces/node_modules/dynosrc-website/build/html/Users/ryanstevens/Documents/workspaces/node_modules/dynosrc-website/build/html/Users/ryanstevens/Documents/workspaces/node_modules/dynosrc-website/build/html/Users/ryanstevens/Documents/workspaces/node_modules/dynosrc-website/build/html/Users/ryanstevens/Documents/workspaces/node_modules/dynosrc-website/build/html/Users/ryanstevens/Documents/workspaces/node_modules/waving/build/html/Users/ryanstevens/Documents/workspaces/node_modules/waving/build/html/Users/ryanstevens/Documents/workspaces/node_modules/waving/build/html/Users/ryanstevens/Documents/workspaces/node_modules/waving/build/html/base.html' %}
+
+{% block css %}
+<!-- No CSS -->
+{% endblock %}
+
+{% block js_body %}
+<script src="/dynoSrc/dynoSrc.io.js"></script>
+<script>
+  window.addEventListener('message', function(event) {
+    // support * origins
+    var applyRegex = /^apply:/,
+      clientAssets;
+
+    if (applyRegex.test(event.data)) {
+      clientAssets = event.data.replace(applyRegex, '').split('|');
+      clientAssets.forEach(function(asset) {
+        var parts = asset.split('#');
+        
+        dynoSrc.fetch(parts[0], parts[1], function(content) {
+          event.source.postMessage('script:' + asset + ':' + content, '*');
+        });
+      });
+    }
+  });
+  
+  window.parent.postMessage('ready', '*');
+</script>
+{% endblock %}

@@ -1,0 +1,346 @@
+/**
+ * GitHub theme
+ *
+ * @author Craig Campbell
+ * @version 1.0.4
+ */
+pre {
+  border: 1px solid #ccc;
+  word-wrap: break-word;
+  padding: 6px 10px;
+  line-height: 19px;
+  margin-bottom: 20px;
+}
+code {
+  border: 1px solid #eaeaea;
+  margin: 0px 2px;
+  padding: 0px 5px;
+  font-size: 12px;
+}
+pre code {
+  border: 0px;
+  padding: 0px;
+  margin: 0px;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+}
+pre,
+code {
+  font-family: Consolas, 'Liberation Mono', Courier, monospace;
+  color: #333;
+  background: #f8f8f8;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+pre,
+pre code {
+  font-size: 10px;
+}
+pre .comment {
+  color: #998;
+}
+pre .support {
+  color: #0086B3;
+}
+pre .tag,
+pre .tag-name {
+  color: navy;
+}
+pre .keyword,
+pre .css-property,
+pre .vendor-prefix,
+pre .sass,
+pre .class,
+pre .id,
+pre .css-value,
+pre .entity.function,
+pre .storage.function {
+  font-weight: bold;
+}
+pre .css-property,
+pre .css-value,
+pre .vendor-prefix,
+pre .support.namespace {
+  color: #333;
+}
+pre .constant.numeric,
+pre .keyword.unit,
+pre .hex-color {
+  font-weight: normal;
+  color: #099;
+}
+pre .entity.class {
+  color: #458;
+}
+pre .entity.id,
+pre .entity.function {
+  color: #900;
+}
+pre .attribute,
+pre .variable {
+  color: teal;
+}
+pre .string,
+pre .support.value {
+  font-weight: normal;
+  color: #d14;
+}
+pre .regexp {
+  color: #009926;
+}
+.dynogreen {
+  color: #588c5b;
+}
+.jumbotron h1 {
+  font-size: 76px;
+}
+.vertical-offset {
+  margin-top: 100px;
+}
+.vote-comment {
+  top: 0px;
+  left: 300px;
+  position: absolute;
+  font-size: 200px;
+  line-height: 0;
+}
+.vote-iframe {
+  position: absolute;
+  top: 85px;
+  left: 55px;
+  z-index: 1;
+}
+.code-changed {
+  background-color: rgba(88, 140, 91, 0.1);
+  width: 320px;
+  margin-left: -10px;
+}
+.changed-arrow-1 {
+  position: absolute;
+  padding: 0 8px 0 0;
+  width: 40px;
+  height: 340px;
+  top: 212px;
+  right: -24px;
+}
+.changed-arrow-2 {
+  /* HAXX */
+
+  position: absolute;
+  padding: 0 8px 0 0;
+  width: 40px;
+  height: 340px;
+  top: 532px;
+  right: -24px;
+}
+.changed-arrow-3 {
+  /* HAXX */
+
+  position: absolute;
+  padding: 0 8px 0 0;
+  width: 40px;
+  height: 450px;
+  top: 126px;
+  right: -24px;
+}
+.changed-arrow-4 {
+  /* HAXX */
+
+  position: absolute;
+  padding: 0 8px 0 0;
+  width: 40px;
+  height: 650px;
+  top: 355px;
+  right: -24px;
+}
+.jumbotron.stars {
+  background-image: url("/img/stars_small.jpg");
+  background-color: #1b1c21;
+  color: white;
+}
+.jumbotron.stars2 {
+  background-image: url("/img/stars_small_2.jpg");
+  background-color: black;
+  color: white;
+}
+.jumbotron.stars3 {
+  background-image: url("/img/stars_small_3.jpg");
+  background-color: black;
+  color: white;
+  height: 900px;
+}
+.jumbotron.stars4 {
+  background-image: url("/img/stars_small_4.jpg");
+  background-color: black;
+  color: white;
+}
+.overflow-hidden {
+  overflow: hidden;
+}
+i.big {
+  font-size: 85px;
+}
+i.big.how {
+  font-size: 105px;
+  margin-top: 125px;
+}
+i.big.arrow {
+  margin-top: 150px;
+  font-size: 70px;
+}
+i.medium {
+  line-height: 80px;
+  font-size: 60px;
+}
+.padding-controller {
+  margin-top: 50px;
+}
+.padding-controller .header {
+  margin-right: 55px;
+  font-size: 60px;
+  margin-bottom: 30px;
+}
+.padding-controller-base {
+  margin-top: 50px;
+}
+.padding-controller-base .header {
+  margin-left: 55px;
+  font-size: 60px;
+  margin-bottom: 30px;
+}
+.slideUp {
+  -webkit-animation-name: slideUp;
+  -webkit-animation-duration: 0.4s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+@-webkit-keyframes slideUp {
+  from {
+    -webkit-transform: perspective(2000px) translatey(590px);
+  }
+}
+.jumbotron.stars2 img {
+  width: 100%;
+}
+.container .jumbotron {
+  border-radius: 0 0 6px 6px;
+}
+.circle:hover,
+.circle.active {
+  cursor: pointer;
+  color: #3d7c3d;
+  text-shadow: none;
+  background-color: #fff;
+  border-color: #fff;
+}
+.circle,
+.circle.no-hover {
+  cursor: default;
+  background-color: transparent;
+  border-color: #bfe3c0;
+  border-radius: 46px;
+  border: 2px solid white;
+  color: white;
+  height: 85px;
+  margin: 0 auto;
+  width: 85px;
+}
+.circle.active {
+  color: black;
+}
+.howto-padding {
+  margin-top: 35px;
+}
+/* Outline button for use within the docs */
+.btn-outline {
+  color: #3d7c3d;
+  background-color: #fff;
+  border-color: #e5e5e5;
+}
+.btn-outline:hover,
+.btn-outline:focus,
+.btn-outline:active {
+  color: #fff;
+  background-color: #3d7c3d;
+  border-color: #3d7c3d;
+}
+/* Inverted outline button (white on dark) */
+.btn-outline-inverse {
+  color: #fff;
+  background-color: transparent;
+  border-color: #bfe3c0;
+}
+.btn-outline-inverse:hover,
+.btn-outline-inverse:focus,
+.btn-outline-inverse:active {
+  color: #3d7c3d;
+  text-shadow: none;
+  background-color: #fff;
+  border-color: #fff;
+}
+/*-----------------------------------------------------------------------------
+-* Dyno graphics
+-*---------------------------------------------------------------------------*/
+.dyno {
+  font-size: 32px;
+  height: 25em;
+  width: 28em;
+}
+.dyno-green:after {
+  color: black;
+  box-shadow: 0 5em,0 6em,0 7em,0 8em,1em 4em,1em 5em,1em 8em,1em 9em,2em 2em,2em 3em,2em 4em,2em 9em,3em 1em,3em 2em,3em 9em,4em 0em,4em 1em,4em 4em,4em 9em,4em 10em,4em 11em,4em 12em,4em 13em,4em 14em,4em 15em,4em 16em,4em 17em,4em 18em,5em 0em,5em 9em,5em 10em 0 #1C501F,5em 11em 0 #1C501F,5em 12em 0 #3A6E3D,5em 13em 0 #3A6E3D,5em 14em 0 #3A6E3D,5em 15em 0 #3A6E3D,5em 16em 0 #3A6E3D,5em 17em 0 #3A6E3D,5em 18em,5em 19em,5em 20em,6em 0em,6em 4em,6em 8em,6em 16em 0 #3A6E3D,6em 17em 0 #003201,6em 18em 0 #1C501F,6em 19em 0 #1C501F,6em 20em,6em 21em,6em 22em,6em 23em,7em 0em,7em 1em,7em 17em 0 #3A6E3D,7em 18em 0 #3A6E3D,7em 19em 0 #003201,7em 20em 0 #1C501F,7em 21em,7em 22em 0 #3A6E3D,7em 23em,8em 1em,8em 2em,8em 9em,8em 10em,8em 11em,8em 12em,8em 13em,8em 19em 0 #3A6E3D,8em 20em 0 #1C501F,8em 21em,8em 22em,8em 23em,9em 2em,9em 3em,9em 4em,9em 5em,9em 6em,9em 7em,9em 8em,9em 9em,9em 13em,9em 14em,9em 20em 0 #3A6E3D,9em 21em 0 #3A6E3D,9em 22em,10em 14em,10em 22em,11em 14em,11em 23em,11em 24em,12em 13em,12em 14em,12em 24em,13em 13em,13em 18em 0 #1C501F,13em 24em,14em 13em,14em 16em 0 #1C501F,14em 21em 0 #3A6E3D,14em 22em 0 #1C501F,14em 23em,14em 24em,15em 13em,15em 18em 0 #1C501F,15em 22em 0 #1C501F,15em 23em,16em 13em,16em 16em 0 #1C501F,16em 22em 0 #1C501F,16em 23em,17em 13em,17em 14em,17em 18em 0 #1C501F,17em 22em 0 #1C501F,17em 23em,17em 24em,18em 14em,18em 24em,19em 14em,19em 24em,20em 14em,20em 15em,20em 21em 0 #1C501F,20em 22em,20em 23em,20em 24em,21em 15em,21em 16em,21em 17em,21em 21em 0 #1C501F,21em 22em,22em 17em,22em 18em,22em 19em,22em 21em 0 #3A6E3D,22em 22em,23em 19em,23em 20em,23em 21em 0 #3A6E3D,23em 22em,24em 20em,24em 21em 0 #3A6E3D,24em 22em,25em 20em,25em 21em,25em 22em,26em 21em,26em 22em,27em 22em,5.5em 3.5em 0 2.5em #588C5B,2.5em 6.5em 0 1.5em #588C5B,6.5em 6.5em 0 1.5em #588C5B,6.5em 10.5em 0 1.5em #588C5B,6.5em 14.5em 0 1.5em #588C5B,12em 18em 0 4em #588C5B,20.5em 18.5em 0 1.5em #588C5B,15.5em 18.5em 0 4.5em #588C5B;
+  content: '';
+  display: block;
+  height: 1em;
+  position: absolute;
+  width: 1em;
+}
+.dyno-pink:after {
+  color: black;
+  box-shadow: 0 5em,0 6em,0 7em,0 8em,1em 4em,1em 5em,1em 8em,1em 9em,2em 2em,2em 3em,2em 4em,2em 9em,3em 1em,3em 2em,3em 9em,4em 0em,4em 1em,4em 4em,4em 9em,4em 10em,4em 11em,4em 12em,4em 13em,4em 14em,4em 15em,4em 16em,4em 17em,4em 18em,5em 0em,5em 9em,5em 10em 0 #1A121C,5em 11em 0 #1A121C,5em 12em 0 #412C46,5em 13em 0 #412C46,5em 14em 0 #412C46,5em 15em 0 #412C46,5em 16em 0 #412C46,5em 17em 0 #412C46,5em 18em,5em 19em,5em 20em,6em 0em,6em 4em,6em 8em,6em 16em 0 #412C46,6em 17em 0 #1A121C,6em 18em 0 #1A121C,6em 19em 0 #1A121C,6em 20em,6em 21em,6em 22em,6em 23em,7em 0em,7em 1em,7em 17em 0 #412C46,7em 18em 0 #412C46,7em 19em 0 #1A121C,7em 20em 0 #1A121C,7em 21em,7em 22em 0 #412C46,7em 23em,8em 1em,8em 2em,8em 9em,8em 10em,8em 11em,8em 12em,8em 13em,8em 19em 0 #412C46,8em 20em 0 #1A121C,8em 21em,8em 22em,8em 23em,9em 2em,9em 3em,9em 4em,9em 5em,9em 6em,9em 7em,9em 8em,9em 9em,9em 13em,9em 14em,9em 20em 0 #412C46,9em 21em 0 #412C46,9em 22em,10em 14em,10em 22em,11em 14em,11em 23em,11em 24em,12em 13em,12em 14em,12em 24em,13em 13em,13em 18em 0 #1A121C,13em 24em,14em 13em,14em 16em 0 #1A121C,14em 21em 0 #412C46,14em 22em 0 #1A121C,14em 23em,14em 24em,15em 13em,15em 18em 0 #1A121C,15em 22em 0 #1A121C,15em 23em,16em 13em,16em 16em 0 #1A121C,16em 22em 0 #1A121C,16em 23em,17em 13em,17em 14em,17em 18em 0 #1A121C,17em 22em 0 #1A121C,17em 23em,17em 24em,18em 14em,18em 24em,19em 14em,19em 24em,20em 14em,20em 15em,20em 21em 0 #1A121C,20em 22em,20em 23em,20em 24em,21em 15em,21em 16em,21em 17em,21em 21em 0 #1A121C,21em 22em,22em 17em,22em 18em,22em 19em,22em 21em 0 #412C46,22em 22em,23em 19em,23em 20em,23em 21em 0 #412C46,23em 22em,24em 20em,24em 21em 0 #412C46,24em 22em,25em 20em,25em 21em,25em 22em,26em 21em,26em 22em,27em 22em,5.5em 3.5em 0 2.5em #82598C,2.5em 6.5em 0 1.5em #82598C,6.5em 6.5em 0 1.5em #82598C,6.5em 10.5em 0 1.5em #82598C,6.5em 14.5em 0 1.5em #82598C,12em 18em 0 4em #82598C,20.5em 18.5em 0 1.5em #82598C,15.5em 18.5em 0 4.5em #82598C;
+  content: '';
+  display: block;
+  height: 1em;
+  position: absolute;
+  width: 1em;
+}
+.dyno-glasses {
+  height: 3em;
+  width: 9em;
+}
+.dyno-glasses:after {
+  color: #fff;
+  box-shadow: 1em 0,2em 0,2em 1em,2em 2em,3em 0,3em 1em 0 #59678C,3em 2em,4em 0,4em 1em,4em 2em,5em 0,5em 1em 0 #59678C,5em 2em,6em 0,6em 1em,6em 2em,7em 0,8em 0;
+  content: '';
+  display: block;
+  height: 1em;
+  position: absolute;
+  width: 1em;
+}
+.dyno-small {
+  font-size: 12px;
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+.dyno-small .dyno-glasses {
+  position: absolute;
+  left: 1em;
+  top: 3em;
+  z-index: 10;
+}
+.jumbotron.stars3 .dyno {
+  font-size: 28px;
+  margin-top: -7px;
+}
+.jumbotron.stars3 .dyno-green {
+  -webkit-transform: rotateY(180deg) translateX(397px);
+  -moz-transform: rotateY(180deg) translateX(397px);
+  transform: rotateY(180deg) translateX(397px);
+}
+.jumbotron.stars3 .dyno-pink {
+  left: 108px;
+  position: relative;
+}

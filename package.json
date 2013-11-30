@@ -1,12 +1,14 @@
 {
   "name": "DynoSRC-Website",
-  "version": "0.0.3-5",
+  "version": "0.0.3-7",
   "description": "ヽ( ´¬`)ノ",
   "main": "server.js",
   "subdomain": "dinosrc",
   "domains": [
     "dinosrc.it",
-    "www.dinosrc.it"
+    "www.dinosrc.it",
+    "cats.dinosrc.it",
+    "dogs.dinosrc.it"
   ],
   "scripts": {
     "predeploy": "grunt --env=production",
