@@ -49,7 +49,7 @@ function log (msg) {
 }
 
 dynoProxy.init({
-  origin: 'http://waving.2013.nodeknockout.com',
+  origin: document.location.protocol+ '//' + document.location.host.replace('dogs', 'www'),
   //origin: 'http://localhost:8000',
   onStart: function() {
     log('Established connection to dynoProxy.');

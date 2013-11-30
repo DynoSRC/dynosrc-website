@@ -1,6 +1,6 @@
 {
   "name": "DynoSRC-Website",
-  "version": "0.0.3-7",
+  "version": "0.0.4",
   "description": "ヽ( ´¬`)ノ",
   "main": "server.js",
   "subdomain": "dinosrc",
