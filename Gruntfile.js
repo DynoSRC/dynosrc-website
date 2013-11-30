@@ -8,20 +8,6 @@ var _ = require('underscore')._,
         src: ['**/*.html'],
         dest: 'build/html/'
       },
-      REPLACE: {
-        options: {
-          patterns: [{
-            match: /\{% extends '/g,
-            replacement: function (match) {
-              return match + __dirname + '/build/html';
-            }
-          }]
-        },
-        expand: true,
-        cwd: 'build/html/',
-        src: ['**/*.html'],
-        dest: 'build/html/'
-      },
       JSHINT: {
         options: {
           // TODO
@@ -64,8 +50,8 @@ var _ = require('underscore')._,
     },
 
     DEFAULT_TASKS = {
-      dev: ['copy', 'replace', 'jshint', 'less', 'connect', 'qunit'],
-      production: ['copy', 'replace', 'uglify', 'less']
+      dev: ['copy', 'jshint', 'less', 'connect', 'qunit'],
+      production: ['copy', 'uglify', 'less']
     };
 
 function getTaskList (env, tasks) {
@@ -84,11 +70,6 @@ module.exports = function (grunt) {
     copy: {
       dev: DEFAULT_CONFIG.COPY,
       production : DEFAULT_CONFIG.COPY
-    },
-
-    replace: {
-      dev: DEFAULT_CONFIG.REPLACE,
-      production : DEFAULT_CONFIG.REPLACE
     },
 
     jshint: {
@@ -115,7 +96,7 @@ module.exports = function (grunt) {
     watch: {
       html: {
         files: 'src/html/**/*.html',
-        tasks: getTaskList(env, ['copy', 'replace'])
+        tasks: getTaskList(env, ['copy'])
       },
       css: {
         files: 'src/css/**/*.less',
@@ -129,7 +110,6 @@ module.exports = function (grunt) {
   });
 
   grunt.loadNpmTasks('grunt-contrib-copy');
-  grunt.loadNpmTasks('grunt-replace');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-less');

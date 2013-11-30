@@ -192,7 +192,7 @@ app.get('/bower/diff', function(req, res) {
 
 
 app.listen(port);
-cats.listen(8001);
-dogs.listen(8002);
+//cats.listen(8001);
+//dogs.listen(8002);
 
 console.log('Running server on port %s.', port);

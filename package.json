@@ -1,15 +1,21 @@
 {
   "name": "DynoSRC-Website",
-  "version": "0.0.2",
+  "version": "0.0.3-5",
   "description": "ヽ( ´¬`)ノ",
   "main": "server.js",
+  "subdomain": "dinosrc",
+  "domains": [
+    "dinosrc.it",
+    "www.dinosrc.it"
+  ],
   "scripts": {
+    "predeploy": "grunt --env=production",
     "start": "node server.js",
     "test": "node ./node_modules/tap/bin/tap.js --stderr ./test/*.js --tap"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:nko4/waving.git"
+    "url": "git@github.com:DynoSRC/dynosrc-website.git"
   },
   "dependencies": {
     "consolidate": "0.9.1",
@@ -22,10 +28,10 @@
     "cookies": "~0.3.6",
     "mkdirp": "*",
     "Deferred": "*",
-    "marked" : "0.2.10",
+    "marked": "0.2.10",
     "esformatter": "0.0.11",
     "request": "2.27.0",
-    "dynosrc" : "0.0.2"
+    "dynosrc": "0.0.2"
   },
   "engines": {
     "node": "0.10.x"
