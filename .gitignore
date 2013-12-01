@@ -3,5 +3,8 @@ node_modules
 npm-debug.log
 /bower_components/
 */tmp/
-/build/
 repos
+deploy
+deploy.conf
+id_deploy
+id_deploy.pub

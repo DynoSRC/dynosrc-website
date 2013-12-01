@@ -1,17 +1,104 @@
-@import '/third-party/rainbow/git.less';
-
-.dynogreen{
+/**
+ * GitHub theme
+ *
+ * @author Craig Campbell
+ * @version 1.0.4
+ */
+pre {
+  border: 1px solid #ccc;
+  word-wrap: break-word;
+  padding: 6px 10px;
+  line-height: 19px;
+  margin-bottom: 20px;
+}
+code {
+  border: 1px solid #eaeaea;
+  margin: 0px 2px;
+  padding: 0px 5px;
+  font-size: 12px;
+}
+pre code {
+  border: 0px;
+  padding: 0px;
+  margin: 0px;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+}
+pre,
+code {
+  font-family: Consolas, 'Liberation Mono', Courier, monospace;
+  color: #333;
+  background: #f8f8f8;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+pre,
+pre code {
+  font-size: 10px;
+}
+pre .comment {
+  color: #998;
+}
+pre .support {
+  color: #0086B3;
+}
+pre .tag,
+pre .tag-name {
+  color: navy;
+}
+pre .keyword,
+pre .css-property,
+pre .vendor-prefix,
+pre .sass,
+pre .class,
+pre .id,
+pre .css-value,
+pre .entity.function,
+pre .storage.function {
+  font-weight: bold;
+}
+pre .css-property,
+pre .css-value,
+pre .vendor-prefix,
+pre .support.namespace {
+  color: #333;
+}
+pre .constant.numeric,
+pre .keyword.unit,
+pre .hex-color {
+  font-weight: normal;
+  color: #099;
+}
+pre .entity.class {
+  color: #458;
+}
+pre .entity.id,
+pre .entity.function {
+  color: #900;
+}
+pre .attribute,
+pre .variable {
+  color: teal;
+}
+pre .string,
+pre .support.value {
+  font-weight: normal;
+  color: #d14;
+}
+pre .regexp {
+  color: #009926;
+}
+.dynogreen {
   color: #588c5b;
 }
-
 .jumbotron h1 {
   font-size: 76px;
 }
-
 .vertical-offset {
   margin-top: 100px;
 }
-
 .vote-comment {
   top: 0px;
   left: 300px;
@@ -19,20 +106,17 @@
   font-size: 200px;
   line-height: 0;
 }
-
 .vote-iframe {
   position: absolute;
   top: 85px;
   left: 55px;
   z-index: 1;
 }
-
-.code-changed { 
-  background-color: rgba(88,140,91,0.1);
+.code-changed {
+  background-color: rgba(88, 140, 91, 0.1);
   width: 320px;
   margin-left: -10px;
 }
-
 .changed-arrow-1 {
   position: absolute;
   padding: 0 8px 0 0;
@@ -41,9 +125,9 @@
   top: 212px;
   right: -24px;
 }
-
 .changed-arrow-2 {
   /* HAXX */
+
   position: absolute;
   padding: 0 8px 0 0;
   width: 40px;
@@ -51,9 +135,9 @@
   top: 532px;
   right: -24px;
 }
-
 .changed-arrow-3 {
   /* HAXX */
+
   position: absolute;
   padding: 0 8px 0 0;
   width: 40px;
@@ -63,6 +147,7 @@
 }
 .changed-arrow-4 {
   /* HAXX */
+
   position: absolute;
   padding: 0 8px 0 0;
   width: 40px;
@@ -70,94 +155,78 @@
   top: 355px;
   right: -24px;
 }
-
 .jumbotron.stars {
   background-image: url("/img/stars_small.jpg");
-  background-color:  #1b1c21;
-  color:white;
+  background-color: #1b1c21;
+  color: white;
 }
-
 .jumbotron.stars2 {
   background-image: url("/img/stars_small_2.jpg");
   background-color: black;
-  color:white;
+  color: white;
 }
-
 .jumbotron.stars3 {
   background-image: url("/img/stars_small_3.jpg");
   background-color: black;
-  color:white;
+  color: white;
   height: 900px;
 }
-
 .jumbotron.stars4 {
   background-image: url("/img/stars_small_4.jpg");
   background-color: black;
-  color:white;
+  color: white;
 }
-
 .overflow-hidden {
   overflow: hidden;
 }
-
 i.big {
   font-size: 85px;
 }
-
-i.big.how{
+i.big.how {
   font-size: 105px;
   margin-top: 125px;
 }
-i.big.arrow{
+i.big.arrow {
   margin-top: 150px;
   font-size: 70px;
 }
-
 i.medium {
   line-height: 80px;
   font-size: 60px;
 }
-
 .padding-controller {
   margin-top: 50px;
 }
-
 .padding-controller .header {
   margin-right: 55px;
   font-size: 60px;
   margin-bottom: 30px;
 }
-
 .padding-controller-base {
   margin-top: 50px;
 }
-
 .padding-controller-base .header {
   margin-left: 55px;
   font-size: 60px;
   margin-bottom: 30px;
 }
-
-.slideUp{
-    -webkit-animation-name: slideUp; 
-    -webkit-animation-duration: 0.4s; 
-    -webkit-animation-iteration-count: 1;
-    -webkit-animation-timing-function: ease;
-}   
-@-webkit-keyframes slideUp {
-    from {-webkit-transform:perspective(2000px) translatey(590px);}
+.slideUp {
+  -webkit-animation-name: slideUp;
+  -webkit-animation-duration: 0.4s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
 }
-
+@-webkit-keyframes slideUp {
+  from {
+    -webkit-transform: perspective(2000px) translatey(590px);
+  }
+}
 .jumbotron.stars2 img {
   width: 100%;
 }
-
-
 .container .jumbotron {
   border-radius: 0 0 6px 6px;
 }
-
-
 .circle:hover,
 .circle.active {
   cursor: pointer;
@@ -166,37 +235,30 @@ i.medium {
   background-color: #fff;
   border-color: #fff;
 }
-
 .circle,
 .circle.no-hover {
   cursor: default;
   background-color: transparent;
   border-color: #bfe3c0;
   border-radius: 46px;
-  border: 2px solid white;  
+  border: 2px solid white;
   color: white;
   height: 85px;
   margin: 0 auto;
   width: 85px;
 }
-
-
 .circle.active {
   color: black;
 }
-
-
 .howto-padding {
   margin-top: 35px;
 }
-
 /* Outline button for use within the docs */
 .btn-outline {
   color: #3d7c3d;
   background-color: #fff;
   border-color: #e5e5e5;
 }
-
 .btn-outline:hover,
 .btn-outline:focus,
 .btn-outline:active {
@@ -204,7 +266,6 @@ i.medium {
   background-color: #3d7c3d;
   border-color: #3d7c3d;
 }
-
 /* Inverted outline button (white on dark) */
 .btn-outline-inverse {
   color: #fff;
@@ -219,8 +280,6 @@ i.medium {
   background-color: #fff;
   border-color: #fff;
 }
-
-
 /*-----------------------------------------------------------------------------
 -* Dyno graphics
 -*---------------------------------------------------------------------------*/
@@ -247,9 +306,6 @@ i.medium {
   position: absolute;
   width: 1em;
 }
-
-
-
 .dyno-glasses {
   height: 3em;
   width: 9em;
@@ -263,32 +319,26 @@ i.medium {
   position: absolute;
   width: 1em;
 }
-
-
 .dyno-small {
   font-size: 12px;
   -webkit-transform: rotateY(180deg);
-     -moz-transform: rotateY(180deg);
-          transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
-
 .dyno-small .dyno-glasses {
   position: absolute;
   left: 1em;
   top: 3em;
   z-index: 10;
 }
-
-
-
 .jumbotron.stars3 .dyno {
   font-size: 28px;
   margin-top: -7px;
 }
 .jumbotron.stars3 .dyno-green {
   -webkit-transform: rotateY(180deg) translateX(397px);
-     -moz-transform: rotateY(180deg) translateX(397px);
-          transform: rotateY(180deg) translateX(397px);
+  -moz-transform: rotateY(180deg) translateX(397px);
+  transform: rotateY(180deg) translateX(397px);
 }
 .jumbotron.stars3 .dyno-pink {
   left: 108px;

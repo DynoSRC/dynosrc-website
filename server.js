@@ -16,10 +16,7 @@ var consolidate = require('consolidate'),
     _ = require('underscore'),
     marked = require('marked'),
     fs = require('fs'),
-    app = express()
-
-    cats = express(),
-    dogs = express();
+    app = express();
 
 marked.setOptions({
   gfm: true,
@@ -72,8 +69,6 @@ dynoSrc.assets({
 });
 // END DYNOSOURCE
 
-cats.use('/', express.static(__dirname + '/cats'));
-dogs.use('/', express.static(__dirname + '/dogs'));
 
 app.use('/img', express.static(__dirname + '/src/img'));
 app.use('/js', express.static(__dirname + '/src/js'));
@@ -89,7 +84,15 @@ swig.setFilter('scriptsafe', function (input) {
   return input.replace(/\r?\n/gm, '\\n').replace(/(['"])/gm, '\\$1');
 });
 
+function serveAnimal(animal, res) {
+  fs.createReadStream(__dirname + '/'+animal+'/index.html').pipe(res);
+}
+
 app.get('/', function (req, res) {
+  var subdomain = req.get('host').split('.')[0].toLowerCase();
+  if (subdomain === 'dogs') return serveAnimal('dogs', res);
+  if (subdomain === 'cats') return serveAnimal('cats', res);
+
   dynoSrc.getPatches(req, {
     patches: ['jquery', 'home']
   }, function(err, patches) {
@@ -190,9 +193,6 @@ app.get('/bower/diff', function(req, res) {
 
 });
 
-
 app.listen(port);
-cats.listen(8001);
-dogs.listen(8002);
 
 console.log('Running server on port %s.', port);
