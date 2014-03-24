@@ -1,12 +1,9 @@
-// https://github.com/nko4/website/blob/master/module/README.md#nodejs-knockout-deploy-check-ins
 
 var isProduction = (process.env.NODE_ENV === 'production');
 var http = require('http');
 var port = (isProduction ? 80 : 8000);
 var url = require('url');
 var async = require('async');
-
-// END WEIRD NKO CODE (?)
 
 var consolidate = require('consolidate'),
     express = require('express'),
